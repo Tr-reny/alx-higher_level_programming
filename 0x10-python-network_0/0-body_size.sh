@@ -4,4 +4,4 @@
 # The response headers are piped to grep, which searches for the "Content-Length" field, which gives the size of the body in bytes.
 # This value is then printed using awk.
 
-curl -sI "$1" | grep "Content-Length" | awk '{print $2}'
+curl -sI "$1" | grep 'Content-Length' | cut -d' ' -f2
