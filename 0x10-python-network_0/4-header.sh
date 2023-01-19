@@ -1,3 +1,3 @@
 #!/bin/bash
-# Send a get request with custom set HEADER variable
-curl -s "$1" -X GET -H "X-HolbertonSchool-User-Id: 98"
+# sends a GET request to the URL, and displays the body of the response
+curl -sH "X-School-User-Id: 98" "$1" 

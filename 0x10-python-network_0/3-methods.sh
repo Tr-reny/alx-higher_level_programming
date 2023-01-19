@@ -1,3 +1,3 @@
 #!/bin/bash
-# Display the REQUEST options available on the server
-curl -sI "$1" -X OPTIONS | grep "Allow" | cut -d' ' -f2-
+#Bash script that takes in a URL and displays all HTTP methods the server will accept.
+curl -sI "$1" | grep "Allow" | cut -d " " -f 2-
